@@ -5,25 +5,21 @@
  *   *
  *****
  */
-
 package DSAPractice.PatternPrinting;
 public class SquarePattern {
     public static void main(String[] args) {
-        int n = 5;
+        int n = 10;
         for (int i = 1; i<=n; i++){
-            int stars = i==1 || i==n ? n : 1;
-            int spaces = i==1 || i==n ? 0 : n-2;
-            for (int j = 1; j<=stars; j++){
-                System.out.print("*");
-            }
-            for (int k =1 ; k<=spaces; k++){
-                System.out.print(" ");
-            }
-            for (int l = 1; l<=stars; l++){
-                if (i==1 || i==n){}
-                else{
+            for (int j = 1; j<=n; j++){
+                boolean iStar = i==1 || i==n;
+                boolean jStar = j==1 || j==n;
+                if (jStar || iStar ){
                     System.out.print("*");
                 }
+                else {
+                    System.out.print(" ");
+                }
+
             }
             System.out.println();
         }
