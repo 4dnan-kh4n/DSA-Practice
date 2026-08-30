@@ -12,6 +12,8 @@ class hcfAndGcd{
 //        System.out.println("The GCD is: " + gcd);
 //    }
 
+
+    //Using Euclidean Algorithm
     public void gcdOptimal(int num1, int num2){
         int mod = 0;
         while (num1>0 && num2>0){
