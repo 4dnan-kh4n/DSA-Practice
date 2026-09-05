@@ -2,7 +2,7 @@ package DSAPractice.Recursion;
 
 public class palindromeString {
     public boolean isPalindrome(String str, int start){
-        if (start>str.length()/2){
+        if (start>=str.length()/2){
             return true;
         }
         if (str.charAt(start) != str.charAt(str.length()-start-1)){
