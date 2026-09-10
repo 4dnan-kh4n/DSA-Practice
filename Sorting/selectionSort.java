@@ -7,7 +7,7 @@ public class selectionSort {
         int temp = 0;
         for (int i = 0; i <= arr.length-2; i++){
             int min = i;
-            for (int j = i; j<=arr.length-2; j++){
+            for (int j = i; j<=arr.length-1; j++){
                 if (arr[min]>arr[j]){
                     min = j;
                 }
@@ -21,7 +21,7 @@ public class selectionSort {
 
 
     public static void main(String[] args) {
-        int[] arr = {2,5,7,4,9,1,6};
+        int[] arr = {2,2,2};
         System.out.println(Arrays.toString(selectionSort(arr)));
     }
 }
