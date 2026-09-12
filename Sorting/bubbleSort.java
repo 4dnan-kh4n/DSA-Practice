@@ -5,12 +5,17 @@ import java.util.Arrays;
 public class bubbleSort {
     public static int[] bubbleSort(int[] nums) {
         int temp = 0;
+        boolean didSwap = false;
         for(int i = 0; i<nums.length;i++){
             for(int j = 1; j<nums.length; j++){
                 if(nums[j]<nums[j-1]){
                     temp = nums[j];
                     nums[j] = nums[j-1];
                     nums[j-1] = temp;
+                    didSwap = true;
+                }
+                if (didSwap == false){
+                    return nums;
                 }
             }
         }
