@@ -3,17 +3,24 @@ package DSAPractice.Sorting;
 import java.util.Arrays;
 
 public class insertionSort {
-    public static int[] insertionSort(int[] arr){
-        for (int i = 0 ; i<arr.length;i++){
+    public static int[] insertionSort(int[] num){
+        int temp = 0;
+        for (int i = 1 ; i<num.length; i++){
             int j = i;
-            while(j>0 && arr[j-1] > arr[j]){
-                int temp = arr[j-1];
-                arr[j-1] = arr[j];
-                arr[j]=temp;
-                j--;
+
+            while (j!=0){
+                if (num[j] < num[j-1]){
+                    temp = num[j];
+                    num[j] = num[j-1];
+                    num[j-1] = temp;
+                    j--;
+                }
+                else {
+                    break;
+                }
             }
         }
-        return arr;
+        return num;
     }
 
     public static void main(String[] args) {
